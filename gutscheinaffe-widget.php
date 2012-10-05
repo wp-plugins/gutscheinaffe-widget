@@ -171,9 +171,9 @@ class Gutscheinaffe_Widget extends WP_Widget {
 			
 			<select class="<?php echo $class_prefix; ?>-select">
 				<option <?php echo ( $instance[ 'category' ] == 'none' ? 'selected="selected"' : ''); ?> value="none"><?php _e( 'Gutschein-Kategorie wählen', $this->textdomain ); ?></option>
-				<option <?php echo ( $instance[ 'category' ] == 'top' ? 'selected="selected"' : '' ); ?> value="getTop"><?php _e( 'Top Gutscheine', $this->textdomain ); ?></option>
-				<option <?php echo ( $instance[ 'category' ] == 'new' ? 'selected="selected"' : '' ); ?> value="getNew"><?php _e( 'Neueste Gutscheine', $this->textdomain); ?></option>
-				<option <?php echo ( $instance[ 'category' ] == 'expiring' ? 'selected="selected"' : '' ); ?> value="getExpiring"><?php _e( 'Ablaufende Gutscheine', $this->textdomain ); ?></option>
+				<option <?php echo ( $instance[ 'category' ] == 'getTop' ? 'selected="selected"' : '' ); ?> value="getTop"><?php _e( 'Top Gutscheine', $this->textdomain ); ?></option>
+				<option <?php echo ( $instance[ 'category' ] == 'getNew' ? 'selected="selected"' : '' ); ?> value="getNew"><?php _e( 'Neueste Gutscheine', $this->textdomain); ?></option>
+				<option <?php echo ( $instance[ 'category' ] == 'getExpiring' ? 'selected="selected"' : '' ); ?> value="getExpiring"><?php _e( 'Ablaufende Gutscheine', $this->textdomain ); ?></option>
 				<?php foreach( $allcategories as $id => $name ): if ( in_array( $id, $instance[ 'categories' ] ) ): ?>
 					<option <?php echo ( $instance[ 'category' ] == $id ? 'selected="selected"' : '' ); ?> value="<?php echo esc_attr( $id ); ?>"><?php echo $name; ?></option>
 				<?php endif; endforeach; ?>
@@ -229,9 +229,9 @@ class Gutscheinaffe_Widget extends WP_Widget {
 					<input <?php echo ($default == 'category' ? 'checked="checked"' : ''); ?> type="radio" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'default' ); ?>" value="category" /> <?php _e( 'Kategorie', $this->textdomain ); ?>:
 				</label>
 				<select class="widefat" name="<?php echo $this->get_field_name( 'category' ); ?>">
-					<option value="getTop" <?php echo ($instance[ 'category' ] == 'top' ? 'selected="selected"' : ''); ?>><?php _e( 'Top Gutscheine', $this->textdomain ); ?></option>
-					<option value="getNew" <?php echo ($instance[ 'category' ] == 'new' ? 'selected="selected"' : ''); ?>><?php _e( 'Neue Gutscheine', $this->textdomain ); ?></option>
-					<option value="getExpiring" <?php echo ($instance[ 'category' ] == 'expiring' ? 'selected="selected"' : ''); ?>><?php _e( 'Ablaufende Gutscheine', $this->textdomain ); ?></option>
+					<option value="getTop" <?php echo ($instance[ 'category' ] == 'getTop' ? 'selected="selected"' : ''); ?>><?php _e( 'Top Gutscheine', $this->textdomain ); ?></option>
+					<option value="getNew" <?php echo ($instance[ 'category' ] == 'getNew' ? 'selected="selected"' : ''); ?>><?php _e( 'Neue Gutscheine', $this->textdomain ); ?></option>
+					<option value="getExpiring" <?php echo ($instance[ 'category' ] == 'getExpiring' ? 'selected="selected"' : ''); ?>><?php _e( 'Ablaufende Gutscheine', $this->textdomain ); ?></option>
 					<?php foreach ( $allcategories as $id => $name ): ?>
 						<option <?php echo ($instance[ 'category' ] == $id ? 'selected="selected"' : ''); ?> value="<?php echo esc_attr( $id ); ?>"><?php echo $name; ?></option>
 					<?php endforeach; ?>
