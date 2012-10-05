@@ -1,4 +1,4 @@
 === Gutscheinaffe Widget ===
 Contributors: Gutscheinaffe
 Tags: widget, gutscheine, gutschein
-Stable tag: 1.1
+Stable tag: 1.1.1
