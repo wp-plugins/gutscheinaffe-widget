@@ -1,0 +1,150 @@
+div.gutscheinaffe_widget {
+	position: relative;
+}
+
+div.gutscheinaffe_widget img {
+	vertical-align: bottom;
+}
+
+form.gutscheinaffe_widget-form {
+	
+}
+
+/**
+ * Eingabe-Feld für Shop-Suche
+ */
+input.gutscheinaffe_widget-query {
+	/* für width: 100% */
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	display: block;
+	width: 100%;
+	
+	border: 1px solid #666;
+	
+	padding: 4px 10px 4px 32px;
+	
+	background: url('../images/search.png') no-repeat;
+}
+
+/**
+ * Autovervollständigungsliste der Suche
+ */
+ul.gutscheinaffe_widget-autocomplete {
+	margin: 0;
+	padding: 0;
+	
+    background: white;
+    list-style: none outside none;
+    position: absolute;
+    z-index: 100;
+    
+    border: 1px solid #666; /* border-color */
+    border-top: 0 none;
+    
+    display: none;
+    left: 0;
+    right: 0;
+}
+
+ul.gutscheinaffe_widget-autocomplete li {
+	padding: 0 2px 0 32px;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+ul.gutscheinaffe_widget-autocomplete li.selected,
+ul.gutscheinaffe_widget-autocomplete li:hover {
+	background: #ddd; /* highlight-color */
+}
+
+ul.gutscheinaffe_widget-autocomplete li a {
+	color: #666; /* autocomplete-color */
+	display: block;
+	overflow: hidden;
+}
+
+/**
+ * Container-Element, das die Tabelle mit Gutscheinen umgibt
+ */
+
+div.gutscheinaffe_widget-table-container {
+
+}
+
+div.gutscheinaffe_widget-table-container.loading {
+	height: 39px;
+	background: url('../images/ajax-loader.gif') no-repeat 50%;
+}
+
+/**
+ * Tabelle mit Gutscheinen
+ */
+table.gutscheinaffe_widget-table {
+	width: 100%;
+}
+
+table.gutscheinaffe_widget-table tr {
+
+}
+
+table.gutscheinaffe_widget-table tr:nth-child(even) {
+	background: #efefef; /* zebra-color 1*/
+}
+
+table.gutscheinaffe_widget-table tr:hover {
+	background: #ddd; /* hover-color */
+}
+
+table.gutscheinaffe_widget-table td {
+	vertical-align: middle;
+}
+
+table.gutscheinaffe_widget-table td a {
+	display: block;
+	height: 31px;
+	
+	padding: 3px;
+	line-height: 31px;
+	
+	text-align: center;
+	font-size: larger;
+	font-weight: bold;
+}
+
+/**
+ * Shop-Logo
+ */
+td.gutscheinaffe_widget-logo {
+	width: 90px;
+	height: 35px;
+}
+
+/**
+ * Wert des Gutscheins
+ */
+td.gutscheinaffe_widget-worth a {
+	color: #000;
+}
+
+td.gutscheinaffe_widget-worth a:hover {
+	text-decoration: none;
+}
+
+/**
+ * Link zum Gutschein
+ */
+td.gutscheinaffe_widget-link a {
+	
+}
+
+/**
+ * Dropdown für Kategorien
+ */
+select.gutscheinaffe_widget-select {
+	width: 100%;
+}
