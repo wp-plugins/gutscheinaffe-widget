@@ -77,15 +77,15 @@
 	autocomplete.prototype.bindEvents = function() {
 		var self = this;
 		
-		this.input.on('keyup', function(event){
+		this.input.bind('keyup', function(event){
 			self.onKeyup(event);
 		});
 		
-		this.input.on('blur', function(event) {
+		this.input.bind('blur', function(event) {
 			self.list.fadeOut(self.delay);
 		});
 
-		this.input.closest('form').on('submit', function() {
+		this.input.closest('form').bind('submit', function() {
 			return false;
 		});
 	}
@@ -161,7 +161,7 @@
 		this.list.hide().empty();
 	
 		for ( var i = 0; i < list.length; i++ ) {
-			$('<li><a href="javascript:void(false);">' + list[i].name + ' (' + list[i].count + ')</a></li>').on('click', {
+			$('<li><a href="javascript:void(false);">' + list[i].name + ' (' + list[i].count + ')</a></li>').bind('click', {
 				shop: list[i]
 			}, function(event) {
 				var ret = self.onSelect(event);
@@ -215,10 +215,10 @@
 			cache: true,
 			beforeSend: function() {
 				self.table.empty();
-				self.tablecon.addClass('loading');
+				self.tablecon.addClass('gutscheinaffe_widget-loading');
 			},
 			complete: function() {
-				self.tablecon.removeClass('loading');
+				self.tablecon.removeClass('gutscheinaffe_widget-loading');
 			}
 		});
 		
@@ -249,7 +249,7 @@
 		var self = this;
 	
 		// bind select event
-		this.categories.on('change', function(event) {
+		this.categories.bind('change', function(event) {
 			var value	= $(this.options[this.selectedIndex]).val();
 			var id		= parseInt(value);
 			

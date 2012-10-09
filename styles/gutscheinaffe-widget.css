@@ -76,7 +76,7 @@ div.gutscheinaffe_widget-table-container {
 
 }
 
-div.gutscheinaffe_widget-table-container.loading {
+div.gutscheinaffe_widget-table-container.gutscheinaffe_widget-loading {
 	height: 39px;
 	background: url('../images/ajax-loader.gif') no-repeat 50%;
 }
@@ -102,6 +102,7 @@ table.gutscheinaffe_widget-table tr:hover {
 
 table.gutscheinaffe_widget-table td {
 	vertical-align: middle;
+	padding: 0;
 }
 
 table.gutscheinaffe_widget-table td a {
