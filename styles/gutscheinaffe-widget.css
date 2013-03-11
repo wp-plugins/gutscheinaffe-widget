@@ -130,6 +130,7 @@ td.gutscheinaffe_widget-logo {
  */
 td.gutscheinaffe_widget-worth a {
 	color: #000;
+	overflow: hidden;
 }
 
 td.gutscheinaffe_widget-worth a:hover {

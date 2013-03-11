@@ -3,7 +3,7 @@
 Plugin Name: Gutscheinaffe Widget
 Plugin URI: http://www.gutscheinaffe.de/
 Description: Die Widgets zeigen aktuelle Gutscheine von gutscheinaffe.de an.
-Version: 1.1.2
+Version: 1.1.3
 Author: Julian Exner
 Author URI: http://www.gutscheinaffe.de/
 */
